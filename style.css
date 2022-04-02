@@ -1,5 +1,6 @@
 body,
-button {
+button,
+input {
   font-weight: bold;
   font-size: 2.5rem;
 }
@@ -21,9 +22,12 @@ input {
   grid-column: 1 / span 4;
   grid-row: 1 / span 2;
   height: 60%;
+  text-align: end;
+  padding-right: 1rem;
 }
 
 button {
   height: 70px;
   border-radius: 50%;
+  background: white;
 }

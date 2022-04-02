@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll(".calculator_btn");
-const resultDisplay = document.querySelector("#result").innerHTML;
+const resultDisplay = document.getElementById("result");
 const calcArray = [];
-document.querySelector("#result").innerHTML = "hello";
+
 buttons.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     let joinedSum = "";
@@ -10,9 +10,10 @@ buttons.forEach((btn) => {
 
     if (buttonPress !== "=") {
       calcArray.push(buttonPress);
+      resultDisplay.value = calcArray.join("");
     } else {
       joinedSum = calcArray.join("");
-      document.querySelector("#result").innerHTML = eval(joinedSum);
+      resultDisplay.value = eval(joinedSum).toFixed(4);
 
       console.log(eval(joinedSum));
     }
